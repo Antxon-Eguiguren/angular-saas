@@ -1,0 +1,5 @@
+@mixin estiloLis($colorFondo, $colorFuente, $padding) {
+    background-color: $colorFondo;
+    color: $colorFuente;
+    padding: $padding;
+}

@@ -1,0 +1,26 @@
+@import "../assets/scss/imports";
+@import "../assets/scss/variables";
+@import "../assets/scss/mixins";
+
+h1 {
+    font-family: $fuente-sen;
+}
+
+ul {
+    font-family: $fuente-roboto;
+}
+
+@for $i from 1 through 3 {
+    ul {
+        list-style: none;
+        @if ($i % 2 == 0) {
+            li:nth-child(#{$i}) {
+                @include estiloLis(black, white, 10px);
+            }
+        } @else {
+            li:nth-child(#{$i}) {
+                @include estiloLis(beige, black, 10px);
+            }
+        }
+    }
+}
